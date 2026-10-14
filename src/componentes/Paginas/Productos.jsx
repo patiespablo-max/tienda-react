@@ -1,9 +1,11 @@
-import { useParams } from "react-router-dom";
-function Productos(){
-    return(
+import ItemListContainer from '../Productos/ItemListContainer.jsx'
+function Productos() {
+    return (
         <section>
-            <h1>Productos</h1>
+            <h1 className="titulo-pagina">Productos</h1>
+            <ItemListContainer />
         </section>
     )
 }
 export default Productos
+

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "RAY-BAN AVIATOR 3025L L0205",
+    "categoria": "Anteojos Sol",
+    "precio": 1250000,
+    "stock": 5,
+    "descripcion": "El modelo de Aviador es comodo, estetico y liviano",
+    "imagen": "/imagenes/raybanaviator.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "vulk pretend sblk g15 pol",
+    "categoria": "Anteojos Sol",
+    "precio": 680000,
+    "stock": 10,
+    "descripcion": "Pantalla AMOLED de 6.5 pulgadas, 128 GB de almacenamiento y cámara principal de 50 MP.",
+    "imagen": "/imagenes/vulkpretend.jpg"
+  }
+]
