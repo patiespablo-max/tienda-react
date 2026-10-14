@@ -1,14 +1,10 @@
 import { createContext, useContext, useState } from 'react'
 
-// 1) Creamos el contexto: una "caja" que cualquier componente puede abrir
 const CartContext = createContext()
 
-// 2) El Provider guarda el estado del carrito y lo comparte con sus hijos
 export function CartProvider({ children }) {
-  // Cada elemento del carrito es: { ...producto, cantidad }
   const [cart, setCart] = useState([])
 
-  // Agrega un producto. Si ya estaba, solo suma la cantidad.
   const addToCart = (producto, cantidad) => {
     setCart((carritoActual) => {
       const existe = carritoActual.find((item) => item.id === producto.id)
@@ -45,7 +41,6 @@ export function CartProvider({ children }) {
   )
 }
 
-// 3) Hook propio para no repetir useContext(CartContext) en cada componente
 export function useCart() {
   return useContext(CartContext)
 }
