@@ -1,12 +1,31 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './componentes/Layout/Layout.jsx'
+import Home from './componentes/Paginas/Home.jsx'
+import Productos from './componentes/Paginas/Productos.jsx'
+import ProductoDetalle from './componentes/Paginas/ProductoDetalle.jsx'
+import Carrito from './componentes/Paginas/Carrito.jsx'
+import NotFound from './componentes/Paginas/NotFound.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <H1></H1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/productos"
+            element={<Productos mensaje="Productos Destacados" />}
+          />
+          <Route
+            path="/destacados"
+            element={<Productos mensaje="Todos los Productos" />}
+          />
+          <Route path="/producto/:id" element={<ProductoDetalle />} />
+          <Route path="/carrito" element={<Carrito />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
