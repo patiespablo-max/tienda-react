@@ -1,8 +1,11 @@
-
+import  { Link} from 'react-router-dom'
+import NavBar from './NavBar'
 function Header() {
   return (
-    <h1>Header</h1>
-
+      <header className="header">
+      <Link to="/" className="logo">⚡ PabloTecno</Link>
+      <NavBar />
+    </header>
   )
 }
 

@@ -1,0 +1,151 @@
+/* ===== Variables y base ===== */
+:root {
+  --oscuro: #0f172a;
+  --medio: #1e293b;
+  --acento: #facc15;
+  --claro: #f8fafc;
+  --texto: #1f2937;
+  --radio: 12px;
+  --sombra: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--texto);
+  background-color: var(--claro);
+  line-height: 1.6;
+}
+
+/* Hace que el footer quede abajo aunque haya poco contenido */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--acento);
+  color: var(--oscuro);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: var(--radio);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #eab308;
+}
+
+/* ===== Header y NavBar ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--oscuro);
+}
+
+.logo {
+  color: var(--claro);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar-lista {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-lista a {
+  color: var(--claro);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar-lista a:hover {
+  color: var(--acento);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: var(--oscuro);
+  color: var(--claro);
+  padding: 2.5rem 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr; /* celular: todo en una columna */
+  gap: 2rem;
+}
+
+/* Pantallas grandes: la empresa ocupa 1 parte y el equipo 2 */
+@media (min-width: 800px) {
+  .footer {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.footer h3 {
+  color: var(--acento);
+  margin-bottom: 0.8rem;
+}
+
+.equipo-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tarjeta-persona {
+  flex: 1 1 140px;
+  background-color: var(--medio);
+  border-radius: var(--radio);
+  padding: 1rem;
+  text-align: center;
+}
+
+
+.tarjeta-persona p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  border-top: 1px solid var(--medio);
+  padding-top: 1rem;
+}
+
