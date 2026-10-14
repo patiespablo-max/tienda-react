@@ -6,9 +6,10 @@ import ProductoDetalle from './componentes/Paginas/ProductoDetalle.jsx'
 import Carrito from './componentes/Paginas/Carrito.jsx'
 import NotFound from './componentes/Paginas/NotFound.jsx'
 import ItemDetailContainer from './componentes/Productos/ItemDetailContainer.jsx'
-
+import { CartProvider } from './componentes/Context/CarritoContext.jsx'
 function App() {
   return (
+        <CartProvider>
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
@@ -27,6 +28,8 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+        </CartProvider>
+
   )
 }
 
